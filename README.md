@@ -98,6 +98,7 @@ uvicorn app.api:app --reload
 | YOLOv8n (Nano) | CPU (i7-12th Gen) | \~30 | 33ms |
 | YOLOv8n (Nano) | NVIDIA RTX 3060 | \~150+ | 6ms |
 | YOLOv8m (Medium)| NVIDIA RTX 3060 | \~75 | 13ms |
+https://wandb.ai/metanat74-wupper/YOLOv8/runs/fvw58n2k?nw=nwusermetanat74
 
 -----
 
