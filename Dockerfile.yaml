@@ -1,0 +1,23 @@
+# Use a slim version of Python to keep the image small
+FROM python:3.10-slim
+
+# Install system dependencies for OpenCV and image processing
+RUN apt-get update && apt-get install -y \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy only requirements first to leverage Docker cache
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application
+COPY . .
+
+# Expose the port for FastAPI
+EXPOSE 8000
+
+# Start the API server
+CMD ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8000"]
