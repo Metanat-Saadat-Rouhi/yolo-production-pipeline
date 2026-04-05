@@ -1,7 +1,7 @@
 
 # Real-Time Object Detection & Tracking System
 
-![Project Demo](demo.gif)
+![Project Demo](assets/demo.gif)
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![YOLOv8](https://img.shields.io/badge/Model-YOLOv8-green.svg)
